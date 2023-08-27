@@ -1,39 +1,47 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# resizable_datatable
+<img src="https://media.discordapp.net/attachments/343876281793773578/1145327302507499561/resizable_dt.gif.gif?width=1014&height=868" width = 1000 height = 850/>
 
 ## Features
 
 TODO: List what your package can do. Maybe include images, gifs, or videos.
 
-## Getting started
+## Installing
+Add this yo your package's `pubspec.yaml` file:
+```yaml
+dependencies:
+  resizable_datatable:
+    git:
+      url: https://github.com/nhh1500/resizable_datatable
+```
 
 TODO: List prerequisites and provide or point to information on how to
 start using the package.
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+ResizableDataTable(
+          autoFit: true,
+          headerHeight: 30,
+          header: List.generate(
+              3,
+              (index) =>
+                  ResizableHeader('Column $index', minWidth: 30, width: 100)),
+          data: List.generate(
+              10,
+              (index) => List.generate(3, (col) {
+                    final text =
+                        'ID $index Col $col ${'1' * Random().nextInt(50)}';
+                    return text;
+                  })),
+        )
 ```
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+ResizableDataTable
+| Parameters | Description | 
+| :--- | :---: | 
+| autoFit | set the column width to automatically fit the contents |
+| headerHeight | the height of the datatable header | 
+| header | the list of resizableHeader which define the column name, with, minWidth, etc... | 
+| data | the list of the data | 
+| backgroundColor | background color of the datatable widget |
