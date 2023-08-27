@@ -3,7 +3,7 @@
 
 ## Features
 
-A resiable datatable that able to resize column width
+A resizable datatable that able to resize column width
 
 ## Installing
 Add this yo your package's `pubspec.yaml` file:
