@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resizable_datatable/src/model/datatableModel.dart';
-import 'package:resizable_datatable/src/textsizeGetter.dart';
+
+import 'model/resizableHeader.dart';
+import 'textsizeGetter.dart';
 
 class ResizableDataTable extends StatefulWidget {
   final bool? autoFit;
