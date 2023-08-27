@@ -1,6 +1,6 @@
 # resizable_datatable
 <p>
-<img src="https://media.discordapp.net/attachments/343876281793773578/1145363932979155006/Recording_2023-08-27_at_22.26.55.gif?width=897&height=775" width="897" height="775" />
+<img src="https://media.discordapp.net/attachments/343876281793773578/1145370857527582730/resizable.gif?width=600&height=300" width="600" height="300" />
 </p>
 
 ## Features
