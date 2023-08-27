@@ -1,11 +1,10 @@
 name: resizable_datatable
-description: A new Flutter package project.
+description: A resizable dataTable
 version: 0.0.1
-homepage:
+homepage: https://github.com/nhh1500/resizable_datatable
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
-  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
