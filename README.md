@@ -3,7 +3,7 @@
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+A resiable datatable that able to resize column width
 
 ## Installing
 Add this yo your package's `pubspec.yaml` file:
