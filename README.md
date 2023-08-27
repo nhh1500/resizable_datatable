@@ -38,10 +38,10 @@ ResizableDataTable(
 
 ## Additional information
 ResizableDataTable
-| Parameters | Description | 
-| :--- | :---: | 
-| autoFit | set the column width to automatically fit the contents |
-| headerHeight | the height of the datatable header | 
-| header | the list of resizableHeader which define the column name, with, minWidth, etc... | 
-| data | the list of the data | 
-| backgroundColor | background color of the datatable widget |
+| Parameters | Description  
+| -----------| -----------------
+| autoFit | set the column width to automatically fit the contents 
+| headerHeight | the height of the datatable header 
+| header | the list of resizableHeader which define the column name, with, minWidth, etc... 
+| data | the list of the data 
+| backgroundColor | background color of the datatable widget 
