@@ -22,9 +22,6 @@ class ResizableDataTable extends StatefulWidget {
 }
 
 class _ResizableDataTableState extends State<ResizableDataTable> {
-  late final List<ResizableHeader> _header;
-  late final List<List<String>> _data;
-  late final double _headerHeight;
   final verticalScrollController = ScrollController();
   final horizontalScrollController = ScrollController();
 
@@ -38,31 +35,28 @@ class _ResizableDataTableState extends State<ResizableDataTable> {
   @override
   void initState() {
     super.initState();
-    _header = widget.header;
-    _data = widget.data;
-    _headerHeight = widget.headerHeight;
     autoFitWidth();
   }
 
   void autoFitWidth() {
     if (widget.autoFit ?? false) {
       double width = 0;
-      for (int colIndex = 0; colIndex < _header.length; colIndex++) {
-        final col = _header[colIndex];
+      for (int colIndex = 0; colIndex < widget.header.length; colIndex++) {
+        final col = widget.header[colIndex];
         final colSize =
             TextSizeGetter.textSize(text: col.columnName).width + 25;
         if (colSize > width) {
           width = colSize;
         }
-        for (int dataIndex = 0; dataIndex < _data.length; dataIndex++) {
-          final data = _data[dataIndex][colIndex];
+        for (int dataIndex = 0; dataIndex < widget.data.length; dataIndex++) {
+          final data = widget.data[dataIndex][colIndex];
           final dataSize = TextSizeGetter.textSize(text: data).width + 25;
           if (dataSize > width) {
             width = dataSize;
           }
         }
         //print('col ${colIndex} width $width');
-        _header[colIndex].setWidth(width);
+        widget.header[colIndex].setWidth(width);
       }
     }
   }
@@ -107,10 +101,10 @@ class _ResizableDataTableState extends State<ResizableDataTable> {
   Widget header() {
     return Row(
       children: List.generate(
-          _header.length,
+          widget.header.length,
           (index) => HeaderTile(
-                header: _header[index],
-                height: _headerHeight,
+                header: widget.header[index],
+                height: widget.headerHeight,
               )),
     );
   }
@@ -118,10 +112,10 @@ class _ResizableDataTableState extends State<ResizableDataTable> {
   Widget data() {
     return Column(
       children: List.generate(
-          _data.length,
+          widget.data.length,
           (index) => DataRow(
-                dataRow: _data[index],
-                header: _header,
+                dataRow: widget.data[index],
+                header: widget.header,
               )),
     );
   }
